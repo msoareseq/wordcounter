@@ -2,8 +2,13 @@ use std::collections::HashMap;
 use std::env;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
+use std::time::Instant;
 
 fn main() {
+    // Start time
+    let start = Instant::now();
+    
+    
     // Argument handling
     let args: Vec<String> = env::args().collect();
 
@@ -93,6 +98,8 @@ fn main() {
     for (word, count) in top_n {
         println!("{:>15}: {:>5}", word, count);
     }
-
+    println!();
+    let duration = start.elapsed();
+    println!("Time elapsed: {:?}", duration);
     println!();
 }
