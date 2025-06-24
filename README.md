@@ -1,4 +1,4 @@
-# wordcounter
+# 📖🔢 word counter
 
 **wordcounter** is a simple command-line application written in Rust that counts words in plain text files. It's designed to be fast, efficient, and easy to use.
 
