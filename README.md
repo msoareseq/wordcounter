@@ -6,13 +6,13 @@
 
 - Count total words in one or more text files 
 - Outputs word count per file and total
-- Show top 10, 100, all words in files 
+- Show top 10, 100, n, all words in files 
 - Minimal dependencies and fast execution
 
 ## Usage
 
 ```bash
-wordcounter <file1> <file2> ...
+wordcounter [topn] <file1> <file2> ...
 ```
 
 ### Example
