@@ -4,8 +4,9 @@
 
 ## Features
 
-- Count total words in one or more `.txt` files  
-- Outputs word count per file and total  
+- Count total words in one or more text files 
+- Outputs word count per file and total
+- Show top 10, 100, all words in files 
 - Minimal dependencies and fast execution
 
 ## Usage
