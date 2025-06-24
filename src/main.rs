@@ -47,7 +47,9 @@ fn main() {
     let mut words: HashMap<String, i32> = HashMap::new();
 
     // Reading files
-
+    println!();
+    println!("Reading files...");
+    
     for file_name in files {
         let mut file_words = 0;
         let file = File::open(&file_name).unwrap();
@@ -60,6 +62,7 @@ fn main() {
                         .replace(",", " ")
                         .replace(".", " ")
                         .replace(":", " ")
+                        .replace("-", " ")
                         .split_whitespace()
                     {
                         file_words += 1;
@@ -74,7 +77,7 @@ fn main() {
             }
         }
 
-        println!("File: {} - Total words: {}", file_name, file_words);
+        println!("File: {} - Words: {}", file_name, file_words);
     }
     println!("Total words: {}", total_words);
     println!("------------------------------");
@@ -88,7 +91,7 @@ fn main() {
 
     // print top-n
     for (word, count) in top_n {
-        println!("{}: {}", word, count);
+        println!("{:>15}: {:>5}", word, count);
     }
 
     println!();
